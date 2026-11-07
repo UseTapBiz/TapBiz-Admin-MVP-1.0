@@ -62,6 +62,7 @@
 <script>
 const $=id=>document.getElementById(id);
 let API=localStorage.getItem('tapbiz_api')||'', TOKEN=sessionStorage.getItem('tapbiz_token')||'', DATA={customers:[],pages:[],tags:[],events:[],stats:{}};
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbwhx2npD8PsUenEUlBSghIvq5w5oTKw9fZrAJPLA7boUvKtAW2cFY941uUAIyAGccAn/exec';
 const titles={dashboard:'Visão geral',customers:'Clientes',pages:'Páginas digitais',tags:'Tags NFC',analytics:'Estatísticas',settings:'Configurações'};
 function toast(msg){$('toast').textContent=msg;$('toast').classList.remove('hidden');setTimeout(()=>$('toast').classList.add('hidden'),3200)}
 function esc(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
